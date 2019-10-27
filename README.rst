@@ -31,7 +31,11 @@ To display the NES output, please connect a 320x240 ST7789-based 8-Bit Parallel 
     RST     16  // Reset pin, toggles on startup
     WR      4   // Write strobe control pin - must use a pin in the range 0-31
     RD      2   // Read strobe control pin
+    =====  =======================
 
+    =====  =======================
+    Pin    GPIO
+    =====  =======================
     D0      12  // Must use pins in the range 0-31 for the data bus
     D1      17  // so a single register write sets/clears all bits.
     D2      5   // Pins can be randomly assigned, this does not affect
@@ -41,8 +45,6 @@ To display the NES output, please connect a 320x240 ST7789-based 8-Bit Parallel 
     D6      27
     D7      14
     =====  =======================
-
-(BCKL = backlight enable)
 
 Also connect the power supply and ground. For now, the LCD is controlled using a SPI peripheral, fed using the 2nd CPU. This is less than ideal; feeding
 the SPI controller using DMA is better, but was left out due to this being a proof of concept.
