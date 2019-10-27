@@ -33,13 +33,15 @@ To display the NES output, please connect a 320x240 ST7789-based 8-Bit Parallel 
     RD      2   // Read strobe control pin
     =====  =======================
 
+Must use pins in the range 0-31 for the data bus so a single register write sets/clears all bits.
+Pins can be randomly assigned, this does not affect TFT screen update performance.
     =====  =======================
     Pin    GPIO
     =====  =======================
-    D0      12  // Must use pins in the range 0-31 for the data bus
-    D1      17  // so a single register write sets/clears all bits.
-    D2      5   // Pins can be randomly assigned, this does not affect
-    D3      21  // TFT screen update performance.
+    D0      12  
+    D1      17 
+    D2      5 
+    D3      21
     D4      25
     D5      26
     D6      27
